@@ -2,7 +2,7 @@
 
 namespace App\Service;
 
-interface QuotesClient
+interface QuotesClientInterface
 {
     /**
      * @return string[]

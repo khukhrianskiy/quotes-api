@@ -12,11 +12,11 @@ class QuotesExtractor
     public const QUOTES_MAX_RESULTS = 10;
     private const CACHE_LIFETIME = 3600;
 
-    private QuotesClient $client;
+    private QuotesClientInterface $client;
     private FilesystemAdapter $cache;
     private QuotesFormatter $formatter;
 
-    public function __construct(QuotesClient $client, QuotesFormatter $formatter)
+    public function __construct(QuotesClientInterface $client, QuotesFormatter $formatter)
     {
         $this->client = $client;
         $this->formatter = $formatter;

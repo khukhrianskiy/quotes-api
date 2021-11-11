@@ -2,13 +2,13 @@
 
 namespace App\Service;
 
-class QuotesJsonClient implements QuotesClient
+class QuotesJsonClient implements QuotesClientInterface
 {
     private array $quotes;
 
     public function __construct()
     {
-        $quotes = file_get_contents('./../quotes.json');
+        $quotes = file_get_contents('/var/www/app/quotes.json');
         $this->quotes = json_decode($quotes, true)['quotes'];
     }
 
